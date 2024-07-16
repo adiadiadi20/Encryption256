@@ -1,5 +1,5 @@
 __pycache__/
-*.pyc[cod]
+*.pyc
 *$py.class
 instance/
 *.db
