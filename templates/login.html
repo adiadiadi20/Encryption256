@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cryptic System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">     
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form method="POST" action="{{ url_for('register') }}">
+                <label for="chk" aria-hidden="true">Sign Up</label>
+                {{ register_form.hidden_tag() }}
+                <input type="text" class="input" name="usernamereg" placeholder="Enter your username">
+                <input type="password" class="input" name="passwordreg" placeholder="Enter your password">
+                <button type="submit" class="button" name="submitreg">Register</button>
+            </form>
+
+        </div>
+
+        <div class="login">
+            <form method="POST" action="{{ url_for('login') }}">
+                <label for="chk" aria-hidden="true">Login</label>
+                {{ login_form.hidden_tag() }}
+                <input type="text" class="input" name="usernamelogin" placeholder="Enter your username">
+                <input type="password" class="input" name="passwordlogin" placeholder="Enter your password">
+                <button type="submit" class="button" name="submitlogin">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

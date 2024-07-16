@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="signup">
+            <label>Decrypted Key</label>
+            <div id="key-container">
+                {{ encryption_key }}
+            </div>
+            <label>Encrypted Image</label>
+            <img src="data:image/jpeg;base64,{{ image1 }}" alt="Encrypted Image">
+            <label>Decrypted Image</label>
+            <img src="data:image/jpeg;base64,{{ image2 }}" alt="Decrypted Image">
+        </div>
+    </div>
+</body>
+</html>
